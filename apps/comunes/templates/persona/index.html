@@ -1,0 +1,35 @@
+{% extends 'comunes/listado.html' %}
+
+{% block nuevo_registro %}
+    <a href="#" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Nuevo</a>
+{% endblock %}
+
+{% block tabla %}
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Sexo</th>
+                <th>F.Nacimiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for object in object_list %}
+            <tr>
+                <td>{{object.id}}</td>
+                <td>{{object}}</td>
+                <td>{{object.dni}}</td>
+                <td>{{object.sexo}}</td>
+                <td>{{object.fec_nac}}</td>
+                <td>
+                    {% if not object.active %}
+                    <span class="label label-danger">&nbsp;</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
