@@ -39,7 +39,7 @@ class CreateView(CreateView):
 
 class UpdateView(UpdateView):
     model = Usuario
-    template_name = model._meta.verbose_name.lower() + '/form_horizontal.html'
+    template_name = model._meta.verbose_name.lower() + '/form_vertical.html'
     fields = ['username', 'first_name', 'last_name']
     # template_name_suffix = '_update_form'
 

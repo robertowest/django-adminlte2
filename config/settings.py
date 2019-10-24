@@ -122,12 +122,12 @@ LOGIN_REDIRECT_URL = '/'
 
 # aplicaciones de terceros
 INSTALLED_APPS += [
-    # The general purpose templates
-    'django_adminlte',
-
-    # Optional: Skin for the admin interface
-    'django_adminlte_theme',
+    'crispy_forms',
+    'django_adminlte',          # The general purpose templates
+    'django_adminlte_theme',    # Optional: Skin for the admin interface
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 MIDDLEWARE += [
     'apps.comunes.middleware.CurrentUserMiddleware',

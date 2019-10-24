@@ -1,9 +1,9 @@
 from apps.comunes import utils
 
+
 class CurrentUserMiddleware:
     def process_request(self, request):
         utils.set_current_user(getattr(request, 'user', None))
-
 
 
 class CurrentUserMiddleware:

@@ -9,10 +9,14 @@ Implementación del tema [Bootstrap AdminLTE](https://django-adminlte2.readthedo
 * Django 2.2.1
 * django-adminlte2 0.4.1
 
+
 ### Instalación
 
+```bash
 git clone https://github.com/robertowest/django-adminlte2/
 ./manage.py runserver
+```
+
 
 ### Imágenes
 
