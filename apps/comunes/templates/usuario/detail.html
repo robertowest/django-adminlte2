@@ -1,15 +1,12 @@
 {% extends 'comunes/detalle.html' %}
 
 {% block formulario %}
-    <table>
+    <dl class="dl-horizontal">
         {% for field, val in object %}
-        <tr>
-            <td><label>{{ field }}</label></td>
-            <td>&nbsp; : &nbsp;</td>
-            <td>{{ val }}</td>
-        </tr>
+        <dt>{{ field }}</dt>
+        <dd>{{ val }}</dd>
         {% endfor %}
-    </table>
+    </dl>
 {% endblock %}
 
 {% block acciones %}

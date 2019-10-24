@@ -1,4 +1,7 @@
-<form method="post">{% csrf_token %}
+{% extends 'comunes/pagina.html' %}
+
+<form method="post">
+    {% csrf_token %}
     <p>¿Está seguro de eliminar el objeto "{{ object }}"?</p>
     <input type="submit" value="Confirmar">
 </form>
