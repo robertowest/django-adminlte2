@@ -127,7 +127,7 @@ INSTALLED_APPS += [
     'django_adminlte_theme',    # Optional: Skin for the admin interface
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_TEMPLATE_PACK = 'bootstrap3'     # 'bootstrap', 'uni_form', 'bootstrap3', 'bootstrap4'
 
 MIDDLEWARE += [
     'apps.comunes.middleware.CurrentUserMiddleware',

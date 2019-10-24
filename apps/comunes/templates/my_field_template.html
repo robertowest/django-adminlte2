@@ -1,0 +1,32 @@
+<div id="div_{{ field.id_for_label }}" class="form-group">
+    <label for="{{ field.id_for_label }}" class="control-label {% if field.field.required %}requiredField{% endif %}">
+        {{ field.label|safe }} {% if field.field.required %}<i class="fa fa-check"></i>{% endif %}
+    </label>
+    <input id="{{ field.id_for_label }}" type="text" class="form-control" value="{{ field.value }}">
+    <!--placeholder="{{ field.help_text }}"-->
+    <span id="hint_{{ field.id_for_label }}" class="help-block">{{ field.help_text }}</span>
+</div>
+
+{% comment %}
+<!--
+# mio
+<div id="div_id_username" class="form-group">
+    <label class="control-label requiredField">
+        Nombre de usuario <i class="fa fa-check"></i>
+    </label>
+    <input type="text" class="form-control" id="id_username" placeholder="Enter ...">
+    <span class="help-block">Help block with success</span>
+</div>
+
+# crispy
+<div id="div_id_username" class="form-group">
+    <label for="id_username" class="col-form-label  requiredField">
+        Nombre de usuario <span class="asteriskField">*</span>
+    </label>
+    <div class="">
+        <input type="text" name="username" value="admin" maxlength="150" class="textinput textInput form-control" required id="id_username">
+        <small id="hint_id_username" class="form-text text-muted">Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y @/./+/-/_ </small>
+    </div>
+</div>
+-->
+{% endcomment %}

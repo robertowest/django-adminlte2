@@ -20,7 +20,8 @@
             {% for object in object_list %}
             <tr>
                 <td>{{object.id}}</td>
-                <td><a href="{% url 'comunes:usuario_detail' object.pk %}">{{object.username}}</a></td>
+                {# url 'comunes:usuario_detail' object.pk #}
+                <td><a href="{{object.get_absolute_url}}">{{object.username}}</a></td>
                 <td>{{object}}</td>
                 <td>{{object.email}}</td>
                 <td>{{object.is_superuser}}</td>

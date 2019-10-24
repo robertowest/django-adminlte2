@@ -7,6 +7,10 @@ class AuditoriaModel(models.Model):
     class Meta:
         abstract = True
 
+    def __iter__(self):
+        for field in self._meta.fields:
+            yield(field.verbose_name, field.value_to_string(self))
+
     def meta(self):
         return self._meta
 

@@ -1,5 +1,21 @@
-<h1>{{ object }}</h1>
-<p>{{ object.content }}</p>
-<p>Reporter: {{ object.reporter }}</p>
-<p>Published: {{ object.pub_date|date }}</p>
-<p>Date: {{ now|date }}</p>
+{% extends 'comunes/detalle.html' %}
+
+{% block formulario %}
+    <table>
+        {% for field, val in object %}
+        <tr>
+            <td><label>{{ field }}</label></td>
+            <td>&nbsp; : &nbsp;</td>
+            <td>{{ val }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block acciones %}
+    <div class="pull-right">
+        <a href="{% url 'comunes:usuarios' %}" class="btn btn-info btn-sm"><i class="fa fa-list"></i> Listado</a>
+        <a href="{% url 'comunes:usuario_update' object.pk %}" class="btn btn-success btn-sm mb-10"><i class="fa fa-pencil"></i> Editar</a>
+        <a href="{% url 'comunes:usuario_delete' object.pk %}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Borrar</a>
+    </div>
+{% endblock %}
