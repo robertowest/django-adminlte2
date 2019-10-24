@@ -1,0 +1,16 @@
+# create a new repository on the command line
+echo "# django-adminlte2" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+
+# push an existing repository from the command line
+git remote add origin https://github.com/robertowest/django-adminlte2.git
+git push -u origin master
+
+# delete folder
+git rm -r [carpeta]             # eliminar carpeta local y remoto (github)
+git rm -r --cached [carpeta]    # eliminar carpeta solo en remoto (github)
+git rm -r .idea
+git commit -m "eliminación de carpeta .idea"
+git push origin master
