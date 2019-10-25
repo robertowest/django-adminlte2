@@ -1,2 +1,2 @@
-django-adminlte2==0.4.1
+django-adminlte2==0.4.1         # https://django-adminlte2.readthedocs.io/en/latest/index.html
 django-crispy-forms==1.7.2

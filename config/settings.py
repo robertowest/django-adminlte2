@@ -54,7 +54,8 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,4 +137,5 @@ MIDDLEWARE += [
 # mis aplicaciones
 INSTALLED_APPS += [
     'apps.comunes',
+    'apps.xxx',
 ]

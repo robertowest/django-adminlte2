@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="{% url 'xxx:base' %}">base</a>: plantilla completa con todos los bloques
+            <p>para mayor información: <a href="https://django-adminlte2.readthedocs.io/en/latest/templates_and_blocks.html#adminlte-base-html">pulse aquí</a></p>
+        </li>
+
+        <hr>
+
+        <li>
+            <a href="{% url 'xxx:index' %}">index</a>: plantilla mínima, utiliza la base y solo tiene { block content }
+        </li>
+        <li>
+            <a href="{% url 'xxx:example' %}">example</a>: página de ejemplo
+        </li>
+        <li>
+            <a href="{% url 'xxx:login' %}">login</a>: plantilla de login
+        </li>
+
+        <hr>
+
+        <li>
+            <a href="{% url 'xxx:table' %}">table</a>: plantilla de ejemplo para una tabla
+        </li>
+        <li>
+            <a href="{% url 'xxx:form' %}">form</a>: plantilla de ejemplo para un formulario
+        </li>
+    </ul>
+
+</body>
+</html>
