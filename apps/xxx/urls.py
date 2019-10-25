@@ -17,4 +17,6 @@ urlpatterns = [
 
     path('table/', TemplateView.as_view(template_name='adminlte/pages/index.html'), name='table'),
     path('form/', TemplateView.as_view(template_name='adminlte/pages/edit.html'), name='form'),
+
+    path('chart/', TemplateView.as_view(template_name='chart.html'), name='chart'),
 ]
